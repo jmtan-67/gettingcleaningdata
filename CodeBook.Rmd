@@ -12,7 +12,7 @@ There were a total of 30 subjects, who each performed six activities while weari
 
 The dataset includes 563 variables:
 
-```{r, echo=FALSE}
+```{r}
 names(data)
 ```
 
