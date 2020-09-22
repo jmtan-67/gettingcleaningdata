@@ -1,0 +1,24 @@
+---
+title: "CodeBook.md"
+author: "jm"
+date: "9/22/2020"
+output: html_document
+---
+# Introduction
+
+This dataset summarises the average values of the 561 measurements obtained in the Human Activity Recognition Using Smartphones Dataset, for each activity and each subject. 
+
+There were a total of 30 subjects, who each performed six activities while wearing a smartphone with embedded sensors (acceleromter and gyroscope) on their waist. The six activities included: (1) walking, (2) walking upstairs, (3) walking downstairs, (4) sitting, (5) standing and (6) laying. The 561 measurements obtained included variables from the time and frequency domain.
+
+The dataset includes 563 variables:
+
+```{r, echo=FALSE}
+names(data)
+```
+
+# Data Processing
+A zip file containing the test and train datasets, activity labels and variable names was extracted from the course website. 
+
+The test and train datasets were combined together.The activity labels were converted from its numeric form into the more descriptive activity names, and then added to the dataset. The variable names were also extracted from the list of features and added to the dataset. Trireplicates of certain variable names were found and these were renamed to ensure that each variable name was unique. 
+
+The data was then grouped according to the type of activity and the subject ID. Average values of each variable were obtained according to this grouping to generate the final dataset.
